@@ -16,11 +16,11 @@ int main(int argc, char *argv[])
     int type_select; //this will store whether the data inside of the 
     double matrix_double_data; //this grabs the matrix data from the line so it can be added to the matrix if the data of the matrix is a double
 
-    Matrix<int> matrix1(matrix_size); //initializes the first matrix as an integer matrix since the type select was set to be integers
-    Matrix<int> matrix2(matrix_size);//initializes the second matrix as an integer matrix as well since the type select are integers
+    Matrix<int> matrix1(matrix_size); //initializes the first matrix as an integer matrix since the type select was set to be integers these were pre initialized at the start so the while loop menu could see these instances of the matrix vector
+    Matrix<int> matrix2(matrix_size);//initializes the second matrix as an integer matrix as well since the type select are integers these were pre initialized at the start so the while loop menu could see these instances of the matrix vector
 
-    Matrix<double> matrix3(matrix_size); //initializes the third matrix as an integer matrix since the type select was set to be integers
-    Matrix<double> matrix4(matrix_size);//initializes the fourth matrix as an integer matrix as well since the type select are integers. these have to be initialized outside now so that way the user input selection function can actually read and find these
+    Matrix<double> matrix3(matrix_size); //initializes the third matrix as an integer matrix since the type select was set to be double these were pre initialized at the start so the while loop menu could see these instances of the matrix vector
+    Matrix<double> matrix4(matrix_size);//initializes the fourth matrix as an integer matrix as well since the type select are double. these were pre initialized at the start so the while loop menu could see these instances of the matrix vector
 
     std::cout << "Please Enter the name of the matrix file: "; //prompts the user to enter the file name
     std::cin >> file_name; //gets and saves the user input in file_name
@@ -46,8 +46,8 @@ int main(int argc, char *argv[])
                 extract data overload operator: https://cplusplus.com/reference/istream/istream/operator%3E%3E/
 
             */
-           Matrix<int> matrix1(matrix_size); //initializes the first matrix as an integer matrix since the type select was set to be integers
-           Matrix<int> matrix2(matrix_size);//initializes the second matrix as an integer matrix as well since the type select are integers
+           matrix1 = Matrix<int>(matrix_size); //sets matrix 2 to be a new initialization of the matrix so that way it can have a new size and be given data.
+           matrix2 = Matrix<int>(matrix_size);//sets matrix 2 to be a new initialization of the matrix so that way it can have a new size and be given data.
 
             for (int i = 0; i < matrix_size; i++) //for each row in the text file that has the matrix data in it
             {
